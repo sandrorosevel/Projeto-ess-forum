@@ -19,5 +19,6 @@ export class LoginpageComponent implements OnInit {
 
   login(){
     this.autenticacaoService.login(this.Usuario);
+    alert("Login bem sucedido")
   }
 }

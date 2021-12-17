@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FunListadiscService } from 'src/app/services/funlistadisc.service';
+import { listadisc } from 'src/app/tipos/lista-disc';
 
 @Component({
   selector: 'app-computador',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComputadorComponent implements OnInit {
 
-  constructor() { }
+  listas : listadisc[] = [];
+
+  constructor(private funcoes : FunListadiscService ) { }
 
   ngOnInit(): void {
   }
+
+  criarlista(){
+
+  }
+
+  comentar(){
+
+  }
+
+
 
 }

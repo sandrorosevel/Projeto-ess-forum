@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AutenticacaoService } from '../serveces/autenticacao.service';
-import { usuario } from '../usuario';
+import { AutenticacaoService } from '../services/autenticacao.service';
+import { usuario } from '../tipos/usuario';
 
 @Component({
   selector: 'app-loginpage',

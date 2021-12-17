@@ -7,7 +7,7 @@ import { routing } from './app.rotas';
 import { HomeComponent } from './home/home.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { AutenticacaoService } from './serveces/autenticacao.service';
+import { AutenticacaoService } from './services/autenticacao.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { CriarTopicoComponent } from './criar-topico/criar-topico.component';

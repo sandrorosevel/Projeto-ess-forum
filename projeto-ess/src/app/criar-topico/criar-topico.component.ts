@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FunListadiscService } from '../services/funlistadisc.service';
 @Component({
   selector: 'app-criar-topico',
   templateUrl: './criar-topico.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarTopicoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private funclistadisc: FunListadiscService) { }
 
   ngOnInit(): void {
   }
-
+  redirecionar () {
+    this.funclistadisc.redirecionar();
+  }
 }

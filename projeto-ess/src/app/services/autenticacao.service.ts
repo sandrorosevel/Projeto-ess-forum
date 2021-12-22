@@ -8,14 +8,18 @@ import { Router } from '@angular/router';
 })
 export class AutenticacaoService {
 
+  usuariologado! : usuario;
+
   constructor( private router: Router) {
 
   }
 
   login(usuario: usuario){
+    this.usuariologado = usuario;
     this.router.navigate(['/home'])
   }
   cadastro() {
      this.router.navigate(['/home'])
   }
+  
 }

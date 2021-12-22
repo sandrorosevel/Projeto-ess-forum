@@ -13,6 +13,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CriarTopicoComponent } from './criar-topico/criar-topico.component';
 import { SmartphoneComponent } from './topicos/smartphone/smartphone.component';
 import { ComputadorComponent } from './topicos/computador/computador.component';
+import { CriarlistadiscComponent } from './topicos/criarlistadisc/criarlistadisc.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ComputadorComponent } from './topicos/computador/computador.component';
     CadastroComponent,
     CriarTopicoComponent,
     SmartphoneComponent,
-    ComputadorComponent
+    ComputadorComponent,
+    CriarlistadiscComponent
   ],
   imports: [
     BrowserModule,

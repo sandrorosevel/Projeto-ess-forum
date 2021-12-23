@@ -34,17 +34,21 @@ export class UserController {
     AuthUser(nome: string, senha:string) : boolean{
 
         var user =-1;
+        let valid = false;
 
         for(var i of this.Users){
             if(i.nome==nome && i.senha==senha){
                  user = 1;
+               
             }
         }
     
         if(user == -1){
-            return false;
+            valid= false;
+            return valid;
         }
-        return true
+        valid= true
+        return valid;
 
     }
 

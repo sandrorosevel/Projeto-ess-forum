@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AutenticacaoService } from '../services/autenticacao.service';
-import { usuario } from '../tipos/usuario';
+import { User } from '../tipos/usuario';
 
 @Component({
   selector: 'app-loginpage',
@@ -9,16 +10,31 @@ import { usuario } from '../tipos/usuario';
 })
 export class LoginpageComponent implements OnInit {
 
-  public Usuario: usuario = new usuario();
+  nome: string = "";
+  senha: string = "";
+  email: string = "";
+
   
 
-  constructor(private autenticacaoService: AutenticacaoService) { }
+  constructor(private router: Router, private authService: AutenticacaoService) { }
 
   ngOnInit(): void {
+    this.nome= "";
+    this.senha= "";
+   ;
   }
 
   login(){
-    this.autenticacaoService.login(this.Usuario);
-    alert("Login bem sucedido")
+    this.authService.login(this.nome, this.senha).subscribe({
+      next: () => {
+        alert("Login bem sucedido");
+        this.router.navigate(['/home'])
+      },
+      error: () =>{
+        alert("Login mal sucedido")
+      }
+
+    });
+    
   }
 }

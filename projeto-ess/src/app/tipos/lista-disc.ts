@@ -1,15 +1,15 @@
-import { usuario } from "./usuario";
+import { User } from "./usuario";
 
-export class listadisc{
 
-    titulo! : string;
-    comentarios! : string[];
-    autor! : usuario;
-
-        constructor(titulo : string, autor : usuario){
-            this.titulo=titulo;
-            this.comentarios=[];
-            this.autor=autor;
-        }
-
-    } 
+export class listdisc {
+    
+    titulo: string;
+    comentarios: string[];
+    autor: string;
+    
+    constructor(titulo: string,  autor: string) {
+        this.titulo=titulo;
+        this.comentarios=[];
+        this.autor=autor;
+    }
+}

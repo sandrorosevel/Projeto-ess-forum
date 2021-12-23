@@ -18,7 +18,7 @@ export class listdiscController {
         return disc;
     }
 
-    createDisc(titulo : string, autor : User) : boolean {
+    createDisc(titulo : string, autor : string) : boolean {
         let disc = new listdisc(titulo, autor);
         this.lists.push(disc);
         return true;
@@ -35,11 +35,14 @@ export class listdiscController {
         return true;
     }
 
-   
 
-    deleteComment (user : User, comment: string, disc: listdisc) : boolean {
-        if (user.adm){
-            
+    deleteComment (titulo : string, autor: string, index: number) : boolean {
+        let disc = this.getDiscByTitle(titulo);
+        //let user = this.getUser(user);
+
+        if (/*user.adm || user.*/autor == disc.autor){        
+            let listIndex = this.lists.indexOf(disc)
+            this.lists[listIndex].comentarios.splice(index, 1);
         }
         
         return false;

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SmartphoneComponent implements OnInit {
 
+  titulo = "";
+
   constructor() { }
 
   ngOnInit(): void {

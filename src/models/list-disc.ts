@@ -5,9 +5,9 @@ export class listdisc {
     
     titulo: string;
     comentarios: string[];
-    autor: User;
+    autor: string;
     
-    constructor(titulo: string,  autor: User) {
+    constructor(titulo: string,  autor: string) {
         this.titulo=titulo;
         this.comentarios=[];
         this.autor=autor;

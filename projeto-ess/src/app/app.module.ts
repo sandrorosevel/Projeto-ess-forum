@@ -14,6 +14,9 @@ import { CriarTopicoComponent } from './criar-topico/criar-topico.component';
 import { SmartphoneComponent } from './topicos/smartphone/smartphone.component';
 import { ComputadorComponent } from './topicos/computador/computador.component';
 import { CriarlistadiscComponent } from './topicos/criarlistadisc/criarlistadisc.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+import { DiscussaoComponent } from './discussao/discussao.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { CriarlistadiscComponent } from './topicos/criarlistadisc/criarlistadisc
     CriarTopicoComponent,
     SmartphoneComponent,
     ComputadorComponent,
-    CriarlistadiscComponent
+    CriarlistadiscComponent,
+    DiscussaoComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { CriarlistadiscComponent } from './topicos/criarlistadisc/criarlistadisc
     routing,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [AutenticacaoService],
   bootstrap: [AppComponent],

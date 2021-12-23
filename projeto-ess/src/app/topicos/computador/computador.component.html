@@ -1,2 +1,43 @@
 <h2> Tópico Computadores<h2>
 
+    <div>
+        <input [(ngModel)]="tituloaux"  type="text" >
+        <label>Título da discussão</label>
+    </div>
+
+    <div>
+        <button >Pesquisar</button>      
+    </div>
+    <div>
+        <a routerLink="/criarlistdisc">Criar lista de discurssão</a>     
+    </div>
+
+    
+
+
+    <button (click)="pegartitulos()">Carregar listas</button>
+
+    <ul *ngFor="let lista of listasdisc">
+        <li>
+            <p>lista.titulo</p>
+        </li>
+    </ul>
+
+<br>
+<input [(ngModel)]="titulo"  type="text" >
+<label>titulo</label>
+
+<input [(ngModel)]="comentario"  type="text" >
+<label>comentario</label>
+<button (click)="comentar()">Comentar</button>
+
+<br>
+
+<input [(ngModel)]="titulo"  type="text" >
+<label>titulo</label> 
+<input [(ngModel)]="autor"  type="text" >
+<label>autor</label>
+<input [(ngModel)]="index"  type="text" >
+<label>index</label>   
+
+<button (click)="delete()">Deletar comentario</button>

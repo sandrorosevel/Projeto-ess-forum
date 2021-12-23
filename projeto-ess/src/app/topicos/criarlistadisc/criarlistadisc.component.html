@@ -1,1 +1,16 @@
-<p>criarlistadisc works!</p>
+<h1>Criar lista de discussão<h1>
+
+    <div>
+        <input [(ngModel)]="titulo"  type="text" >
+        <label>titulo</label>
+    </div>
+
+    <div>
+        <input [(ngModel)]="autor" type="text">
+        <label>autor</label>
+    </div>
+
+    <div>
+        <button (click)="criar()">Criar</button> 
+        
+    </div>

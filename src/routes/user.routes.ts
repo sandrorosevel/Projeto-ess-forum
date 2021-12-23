@@ -4,7 +4,8 @@ import { UserController } from "../controllers/user.controller";
 const userrouter = Router();
 const userController = new UserController();
 
-userrouter.route("/")
+userrouter.route("/cadastro")
+
     .get((req: Request, res: Response) =>{
         let users = userController.getUsers();
         return res.json({ users });
@@ -31,24 +32,23 @@ userrouter.route("/")
         return res.json({Warnig: "Método delete não suportado"});
     }) 
 
-userrouter.route("/:nome")
+userrouter.route("/login")
     .get((req: Request, res: Response) =>{
-    
-        var body = req.body
-
-        const nome = body.nome;
-        const senha = body.senha;
+        return res.json({Warnig: "Método Get não suportado"});
         
-        const auth = userController.AuthUser(nome, senha);
-
-        if(auth){
-            return res.json({Message: "Usuário autenticado com sucesso"});
-        }
-        return res.status(409).json({err: "Usuário ou senha incorretos"});
     }) 
     
     .post((req: Request, res: Response) =>{
-        return res.json({Warnig: "Método Post não suportado"});
+        const nome = req.body.nome;
+        const senha = req.body.senha;
+        
+        const auth = userController.AuthUser(nome, senha);
+
+        if(auth==true){
+            return res.json({Message: "Usuário autenticado com sucesso"});
+        }
+        return res.status(409).json({err: "Usuário ou senha incorretos"});
+       
     })
 
     .put((req: Request, res: Response) =>{
@@ -59,4 +59,4 @@ userrouter.route("/:nome")
         return res.json({Warnig: "Método Post não suportado"});
     })
 
- export  default userrouter; 
+ export default userrouter; 
